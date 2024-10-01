@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=PT+Sans+Narrow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        .banner::before {
+            content: " ";
+            background-image: url(https://media.gettyimages.com/id/626558790/photo/flat-lay-image-of-kettlebells-on-a-wooden-floor.jpg?s=612x612&w=0&k=20&c=psb9qiNlnoQHqUs5aBeaksT7P4IX20nSmnkxihrQLrc=);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 303px;
+        }
+        .mainpage::before {
+            content: " ";
+            background-image: url(https://images.unsplash.com/photo-1485727749690-d091e8284ef3?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmVtYWxlJTIwYWJzfGVufDB8fDB8fHww);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            z-index: -1;
+            top: 303px;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            height: 1300px;
+            opacity: 0.8;
+        }
+        .banner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            background-color: rgba(255, 255, 255, 0.228);
+            margin: 10px;
+            padding: 0px 20px;
+            font-family: "PT Sans Narrow", sans-serif;
+            font-weight: 900;
+            font-style: normal;
+            text-align: center;
+            font-size: 2.5rem;
+            line-height: 5.5rem;
+            text-shadow: 2px 2px 2px gray;
+        }
+        .banner::after {
+            content: ' \00A9';
+            position: absolute;
+            top: 168px;
+            right: 488px;
+            font-weight: normal;
+            font-style: normal;
+        }
+        .mainpage {
+            display: grid;
+            grid-gap: 1fr;
+            grid-template-areas:
+                'navbar navbar navbar navbar navbar navbar navbar navbar'
+                ' NONaside NONaside secthere secthere secthere secthere mainaside mainaside'
+                ' foot foot foot foot foot foot foot foot';
+            justify-content: center;
+            justify-items: center;
+            height: 100%;
+
+        }
+        #navbar {
+            grid-area: navbar;
+            text-align: center;
+            margin: 5px;
+            padding: 5px;
+            /* border: 2px solid black;*/
+            /*background-color: rgba(100, 148, 237, 0.637);*/
+            justify-content: center;
+            justify-items: center;
+            justify-self: center;
+            width: 98%;
+            border-radius: 5px;
+        }
+        #navbar nav a {
+            text-decoration: none;
+            padding: 5px 34px;
+            font-family: "PT Sans Narrow", sans-serif;
+            font-style: normal;
+            transition-property: all;
+            transition-duration: 1s;
+            color: black;
+            font-weight: lighter;
+        }
+        #navbar a:hover {
+            text-decoration: underline;
+            cursor: pointer;
+            background-color: rgba(245, 245, 245, 0.568);
+            border-radius: 8px;
+            transition-property: all;
+            transition-duration: 1s;
+        }
+        .secthere {
+            grid-area: secthere;
+            text-align: center;
+            margin: 5px 8px 5px 10px;
+            padding: 20px 10px;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+            /*background-color: rgba(250, 235, 215, 0.667);*/
+            box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.455);
+            /*  height: 974px;
+            width: 800px; */
+            text-shadow: 2px rgba(128, 128, 128, 0.566);
+            font-family: "PT Sans Narrow", sans-serif;
+            font-style: normal;
+            text-align: center;
+            line-height: normal;
+
+        }
+        .secthere p {
+            font-weight: 200;
+            font-size: 1.5rem;
+        }
+        .intro {
+            font-weight: bolder;
+            font-style: normal;
+            font-size: 2.5rem
+        }
+        .intro2 {
+            font-weight: bold;
+            font-style: italic;
+            font-size: 1.7rem;
+            line-height: 3rem;
+        }
+        .viewmore {
+            display: inline-block;
+            justify-content: center;
+            align-items: center;
+        }
+        #box1,
+        #box2,
+        #box3 {
+            height: 90px;
+            width: 790px;
+            text-align: center;
+            align-content: center;
+            transition-property: all;
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+            font-size: medium;
+            font-weight: bold;
+
+        }
+        #box1 summary,
+        #box2 summary,
+        #box3 summary {
+            font-weight: bold;
+            text-shadow: 2px 2px 2px gray;
+            font-size: medium;
+        }
+        #box1 a,
+        #box2 a,
+        #box3 a {
+            color: black;
+        }
+        #box1 {
+            margin: 10px 0px;
+            padding: 10px 0px;
+            background-color: rgba(255, 192, 203, 0.386);
+        }
+        #box1:hover {
+            height: 94px;
+            width: 800px;
+            background-image: url(https://media.istockphoto.com/id/1170914596/photo/exercising-with-drumsticks-in-the-gym.jpg?s=612x612&w=0&k=20&c=HKY9ZAaIpX2YM8NIhM7fgL1MRBLolBhgrBR7hCfF77U=);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function: ease-in-out;
+            font-size: x-large;
+        }
+        #box2:hover {
+            height: 94px;
+            width: 800px;
+            background-image: url(https://media.istockphoto.com/id/538854521/photo/zumba-dance-woman.jpg?s=612x612&w=0&k=20&c=KPIPIzUcHkyFNl4_CpOG6fAuyDwsXumNeqnZVou3G8s=);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function: ease-in-out;
+            font-size: x-large;
+        }
+        #box3:hover {
+            height: 94px;
+            width: 800px;
+            background-image: url(https://media.istockphoto.com/id/1412046939/photo/woman-training-at-group-dance-class.jpg?s=612x612&w=0&k=20&c=BbBBl7btwef2ysOb_Bw2jJ-IcQImElzhfpuKidp1nJU=);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function: ease-in-out;
+            font-size: x-large;
+        }
+        #box2 {
+            margin: 38px 0px 11px 0px;
+            padding: 10px 0px;
+            background-color: rgba(254, 82, 82, 0.381);
+        }
+        #box3 {
+            margin: 38px 0px 11px 0px;
+            padding: 10px 0px;
+            background-color: rgba(173, 85, 255, 0.388);
+        }
+        .NONaside {
+            grid-area: NONaside;
+            text-align: center;
+            text-align: center;
+            margin: 5px 20px 5px 0px;
+            padding: 5px;
+            /*border: 2px solid black;*/
+            height: 850px;
+            width: 134px;
+        }
+        .mainaside {
+            grid-area: mainaside;
+            text-align: center;
+            margin: 5px 0px;
+            /* 191, 205, 241, 0.381*/
+            padding: 60px 10px;
+            background-color: rgba(143, 155, 186, 0.336);
+            box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.455);
+            border: 1px solid rgba(82, 107, 146, 0.863);
+            height: 456px;
+            width: 200px;
+            font-family: "PT Sans Narrow", sans-serif;
+            font-style: normal;
+            font-size: large;
+            font-weight: 800;
+
+        }
+        .mainaside aside ul li {
+            list-style: none;
+        }
+        .mainaside details {
+            text-decoration: none;
+        }
+        .foot {
+            grid-area: foot;
+            padding: 5px 34px;
+            margin: 22px 24px;
+            border: 15px solid rgba(255, 184, 255, 0.119);
+            height: 100px;
+            width: 95%;
+            background-color: rgba(255, 184, 255, 0.397);
+        }
+        /*  
+          MEDIA QUERIES BELOW:  */
+        @media only screen and (max-width:480px) and (min-width:320px) {
+            body {
+                background-color: antiquewhite;
+            }
+            .mainpage {
+                display: grid;
+                grid-gap: 1fr;
+                grid-template-areas:
+                    'navbar navbar navbar navbar navbar navbar navbar navbar'
+                    '  secthere secthere secthere secthere secthere secthere mainaside mainaside'
+                    ' foot foot foot foot foot foot foot foot';
+                justify-content: center;
+                justify-items: center;
+
+
+            }
+            .secthere {
+                grid-area: secthere;
+                text-align: center;
+                margin: 10px;
+                padding: 20px 10px;
+                border: 1px solid black;
+                background-color: rgba(250, 235, 215, 0.667);
+                min-height: 900px;
+                min-width: 300px;
+            }
+            .mainaside {
+                display: none;
+            }
+            #navbar {
+                grid-area: navbar;
+                text-align: center;
+                margin: 5px;
+                padding: 5px;
+                border: 1px solid black;
+                background-color: rgba(100, 148, 237, 0.637);
+                justify-content: center;
+                justify-items: center;
+                justify-self: center;
+                min-width: 98%;
+            }
+            .NONaside {
+                display: none;
+            }
+            .banner {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 2px solid black;
+                background-color: whitesmoke;
+                margin: 10px;
+                padding: 10px;
+                font-family: "PT Sans Narrow", sans-serif;
+                font-weight: 700;
+                font-style: normal;
+                text-align: center;
+                min-width: 98%;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <header>
+            <h1>
+                ZUMBA<br>PLANET </h1>
+        </header>
+    </div>
+    <div class="mainpage">
+        <div id="navbar">
+            <nav class="NAVbar2">
+                <a href="#">HOME</a> <a
+                    href="https://www.justdial.com/Belgaum/Stayfit-Gym-Fitness-Centre-Opposite-Of-State-Bannk-Of-India-Shivabasa-Belgaum/9999PX831-X831-230516183702-I8G2_BZDET?ncatid=11995204&area=&search=Popular%20Zumba%20Classes%20For%20Women%20in%20Belgaum&mncatname=Zumba%20Classes%20For%20Women&abd_btn=&abd_heading=&bd=1&"
+                    target="_blank">CONTACT</a>
+                <a href="https://www.google.com/maps/place/Feel+The+Burn+Dance%26Fitness+Studio/@15.8271945,74.49216,15z/data=!4m10!1m2!2m1!1szumba+classes+near+me!3m6!1s0x3bbf672434ec5409:0xe83d97d85f369088!8m2!3d15.8271945!4d74.5101844!15sChV6dW1iYSBjbGFzc2VzIG5lYXIgbWUiA5ABAVoXIhV6dW1iYSBjbGFzc2VzIG5lYXIgbWWSAQ5maXRuZXNzX2NlbnRlcpoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VOb1gzRXpTRzFCUlJBQuABAA!16s%2Fg%2F11p_3ks03y?entry=ttu"
+                    target="_blank">EXPLORE</a>
+                <a href="https://www.google.com/maps/dir//Feel+The+Burn+Dance%26Fitness+Studio,+Here+krishana+Hare+Ram+Building,+9th+Cross+Rd,+near+kls+school,+Bhagya+Nagar,+Belagavi,+Karnataka+590006/@15.8271945,74.49216,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3bbf672434ec5409:0xe83d97d85f369088!2m2!1d74.5101844!2d15.8271945?entry=ttu"
+                    target="_blank">LOCATE</a>
+            </nav>
+            <hr>
+        </div>
+        <div class="secthere">
+            <section>
+                <div class="intro">
+                    Welcome to Zumba Planet <br>
+                    <div class="intro2">
+                        where the rhythm meets the beat! <br>
+                    </div>
+                </div>
+                <p>
+                    Dive into a high-energy dance workout that's as fun as it is effective. Whether you're a seasoned
+                    dancer or a complete beginner, our vibrant and inclusive community will have you shaking, sweating,
+                    and smiling in no time.
+                </p> <br>
+                <h2>
+                    <center> Join us at Zumba Planet and transform your fitness routine into a dance party you'll
+                        never want to miss!</center>
+                </h2>
+                <hr>
+                <div class="viewmore">
+                    <h2> WATCH US ON YOUTUBE </h2>
+                    <div id="box1">
+                        <a href="https://youtu.be/MwHtUKyLrac?si=-q82FTsoyk2jEsLu" target="_blank">Beginner classes at
+                            our club</a>
+                    </div>
+                    <details>
+                        <summary> Is this your first time? Don't worry, we got you! </summary>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ullam eveniet ad?
+                            Reprehenderit quam possimus sint voluptas ea eos, temporibus dignissimos libero suscipit
+                            repellat esse!</p>
+                    </details>
+                    <div id="box2">
+                        <a href="https://youtu.be/mG1BdVtbpvc?si=P3aRj2lg-sPhuWuO" target="_blank">Watch our student
+                            testimonials</a>
+                    </div>
+                    <details>
+                        <summary> Our students are very happy with us </summary>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ullam eveniet ad?
+                            Reprehenderit quam possimus sint voluptas ea eos, temporibus dignissimos libero suscipit
+                            repellat esse!</p>
+                    </details>
+                    <div id="box3">
+                        <a href="https://youtu.be/94mkftwxT7Y?si=rfb-NJewPq50ro3L" target="_blank">Meet your
+                            teachers</a>
+                    </div>
+                    <details>
+                        <summary> Experienced staff knows ther job!!! </summary>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ullam eveniet ad?
+                            Reprehenderit quam possimus sint voluptas ea eos, temporibus dignissimos libero suscipit
+                            repellat esse!</p>
+                    </details>
+                </div>
+            </section>
+        </div>
+        <div class="NONaside">
+            <aside>
+                embed video here
+            </aside>
+        </div>
+        <div class="mainaside">
+            <aside>
+                <em>Who will teach you?</em>
+                <p> our group of trained coaches know the rhythm!</p>
+
+                <details>
+                    <summary> Radha ma'am</summary>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, officia.</p>
+                </details> <br> <br>
+
+                <details>
+                    <summary>Ajay sir </summary>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, possimus!</p>
+                </details> <br> <br>
+
+                <details>
+                    <summary>Divya ma'am </summary>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, possimus!</p>
+                </details> <br> <br>
+
+                <details>
+                    <summary>Raunak sir </summary>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, possimus!</p>
+                </details> <br> <br>
+
+            </aside>
+        </div>
+        <div class="foot">
+            <footer>
+                <em>
+                    <h2>ZUMBA PLANET </h2>
+                </em> © 2024 ZUMBA PLANET. All rights reserved. Zumba® and the Zumba Fitness logos are trademarks
+                of Zumba Planet, LLC, used under license. Unauthorized reproduction or distribution of this material is
+                prohibited.
+            </footer>
+        </div>
+    </div>
+
+</body>
+</html>
